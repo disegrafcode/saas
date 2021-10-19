@@ -56,6 +56,14 @@
 {
     font-family: 'Josefin Sans', sans-serif;
 }
+.bg-gray
+{
+	background-color: var(--bs-gray);
+}
+.text-gray
+{
+	color: var(--bs-gray) !important;
+}
 .text-secondary {
     color: var(--bs-secondary) !important;
 }
@@ -136,6 +144,7 @@
 }
 
 
+
 /***************************************************************************/
 /***************************************************************************/
 .backgroundHome
@@ -143,6 +152,8 @@
 	background-image: url(../img/homeBackground.jpg);
 	background-position: center bottom;
 	background-size: cover;
+
+	min-height: 850px;
 }
 
 ol {
@@ -175,13 +186,43 @@ ol {
 	margin-right: 5px;
     margin-bottom: 20px;
 	margin-top: 20px;
-	
   }
-
+  	.grayLine{
+		  position: relative;
+		  overflow: hidden;
+	}
+  .grayLine::before,.grayLine::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: var(--bs-gray);
+    top: 50%;
+    width: 400px;
+	}
+	.grayLine:before {
+    right: 0;
+    margin-right: 20px;
+	}
+	.grayLine:after {
+    left: 0;
+    margin-left: 20px;
+	}
   .loopHomeAnimation
   {
 	animation: loopHome 5s ease-in-out 0s infinite alternate-reverse both;
   }
+
+  .list-group-item-logos {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+	min-width: 300px;
+}
   @keyframes loopHome {
 	0% {
 	  transform: translateY(-15px);
