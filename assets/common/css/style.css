@@ -321,6 +321,11 @@ ol {
 		min-width: 250px;
 		max-width: 300px;
 	}
+	.speechBalloon {
+		width: 80%;
+		right: 10%;
+		border-radius: 50px;
+	}
 	
 }
 @media only screen and (max-width:750px){
@@ -328,7 +333,10 @@ ol {
 	{
 		padding-top:100px;
 	}
+
+	
 }
+
 @media only screen and (max-width:600px){
 
 }
