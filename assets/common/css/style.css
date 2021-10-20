@@ -51,6 +51,7 @@
 	--bs-body-line-height: 1.5;
 	--bs-body-color: #495057;
 	--bs-body-bg: #fff;
+	--pageBgLight: #fafbfc;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
 {
@@ -147,6 +148,14 @@
 
 /***************************************************************************/
 /***************************************************************************/
+.pageBgLight
+{
+	background-color: var(--pageBgLight);
+}
+.pageBgDark
+{
+	background-color: var(--bs-dark);
+}
 .backgroundHome
 {
 	background-image: url(../img/homeBackground.jpg);
@@ -212,7 +221,15 @@ ol {
   {
 	animation: loopHome 5s ease-in-out 0s infinite alternate-reverse both;
   }
-
+  @keyframes loopHome {
+	0% {
+	  transform: translateY(-15px);
+	}
+  
+	100% {
+	  transform: translateY(15px);
+	}
+  }
   .list-group-item-logos {
     position: relative;
     display: block;
@@ -223,18 +240,55 @@ ol {
     border: 1px solid rgba(0,0,0,.125);
 	min-width: 300px;
 }
-  @keyframes loopHome {
-	0% {
-	  transform: translateY(-15px);
-	}
-  
-	100% {
-	  transform: translateY(15px);
-	}
-  }
-/***************************************************************************/
-/***************************************************************************/
 
+.floatingImage
+{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-image: url(../img/woman.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+
+.floatingImageInside
+{
+	position: absolute;
+    right: 0;
+    bottom: -150px;
+    width: 50%;
+    height: auto;
+	min-width: 400px;
+}
+
+.speechBalloon
+{
+	position: absolute;
+	width: 70%;
+	right: 0;
+	height: 254px;
+	background-color: rgb(241, 244, 255);
+	z-index: 2;
+
+
+	-webkit-border-top-left-radius: 50px;
+	-webkit-border-bottom-left-radius: 50px;
+	-moz-border-radius-topleft: 50px;
+	-moz-border-radius-bottomleft: 50px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+
+}
+
+  
+/***************************************************************************/
+/***************************************************************************/
+@media only screen and (max-width:1400px){
+	.speechBalloon
+	{
+		width: 85%;
+	}
+}
 
 @media only screen and (max-width:1200px){
 
@@ -242,8 +296,25 @@ ol {
 @media only screen and (max-width:1024px){
 
 }
-@media only screen and (max-width:980px){
+@media only screen and (max-width:991px){
+	.floatingImage
+	{
+		position: relative;
+		height: auto;
+		width: 100%;
+		min-height: 350px;
 
+	}
+	.floatingImageInside {
+		position: absolute;
+		right: 0;
+		top: 10%;
+		width: 50%;
+		height: auto;
+		min-width: 250px;
+		max-width: 300px;
+	}
+	
 }
 @media only screen and (max-width:750px){
 	.backgroundHome
