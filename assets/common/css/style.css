@@ -249,6 +249,13 @@ ol {
 	background-image: url(../img/woman.jpg);
 	background-position: center center;
 	background-size: cover;
+
+	-webkit-border-top-right-radius: 50px;
+	-webkit-border-bottom-right-radius: 50px;
+	-moz-border-radius-topright: 50px;
+	-moz-border-radius-bottomright: 50px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
 }
 
 .floatingImageInside
