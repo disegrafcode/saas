@@ -290,9 +290,23 @@ ol {
 	background: linear-gradient(90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1f4ff",endColorstr="#f1f4ff",GradientType=1);
 
+	box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+-webkit-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+-moz-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+
 }
 
-  
+.testimonialIcon
+{
+	margin-left: -50px;
+    margin-top: -50px;
+
+	-webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+	left: 0;
+    top: 50%;
+	position: absolute;
+}
 /***************************************************************************/
 /***************************************************************************/
 @media only screen and (max-width:1400px){
@@ -337,6 +351,21 @@ ol {
 		margin-top: 0;
 		width: 50%;
 		max-width: 250px;
+	}
+
+	.testimonialIcon
+	{
+		margin-left: initial;
+		margin-top: initial;
+		left: initial;
+
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		right: 15%;
+		top: -10px;
+		position: absolute;
+		width: 15%;
+		z-index: 1;
 	}
 }
 @media only screen and (max-width:750px){
