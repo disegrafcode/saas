@@ -52,6 +52,7 @@
 	--bs-body-color: #495057;
 	--bs-body-bg: #fff;
 	--pageBgLight: #fafbfc;
+	--colorText: #677294;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
 {
@@ -65,9 +66,35 @@
 {
 	color: var(--bs-gray) !important;
 }
+.text-page
+{
+	color: var(--colorText) !important;
+}
 .text-secondary {
     color: var(--bs-secondary) !important;
 }
+
+.bg-primary-glow
+{
+	color: white !important;
+	background-color: rgb(var(--bs-primary-rgb)) !important;
+	box-shadow: 0px 8px 24px 0px rgba(var(--bs-primary-rgb),0.25) !important;
+}
+
+.bg-secondary-glow
+{
+	color: white !important;
+	background-color: rgb(var(--bs-secondary-rgb)) !important;
+	box-shadow: 0px 8px 24px 0px rgba(var(--bs-secondary-rgb),0.25) !important;
+}
+
+.bg-dark-glow
+{
+	color: white !important;
+	background-color: rgb(var(--bs-dark-rgb)) !important;
+	box-shadow: 0px 8px 24px 0px rgba(0,0,255,0.25) !important;
+}
+
 .btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #2683b9;
@@ -165,13 +192,13 @@
 	min-height: 820px;
 }
 
-ol {
+.listNumber1 {
 	list-style: none;
 	counter-reset: my-awesome-counter;
 	margin: 0;
 	padding: 0;
   }
-  ol li {
+  .listNumber1 li {
 	counter-increment: my-awesome-counter;
 	display: inline-block;
 	margin-right: 10px;
@@ -179,7 +206,7 @@ ol {
 	font-size: 14px;
 	color: var(--bs-primary);
   }
-  ol li::before {
+  .listNumber1 li::before {
 	content: counter(my-awesome-counter);
 	color: var(--bs-primary);
 	font-weight: bold;
@@ -238,10 +265,11 @@ ol {
     text-decoration: none;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
-	min-width: 300px;
+	max-width: 300px;
+	width: 100%;
 }
 
-.floatingImage
+.floatingImageLeft
 {
 	position: absolute;
 	width: 50%;
@@ -291,9 +319,35 @@ ol {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1f4ff",endColorstr="#f1f4ff",GradientType=1);
 
 	box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
--webkit-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
--moz-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+	-webkit-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+	-moz-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
 
+}
+.speechBalloon2
+{
+	position: absolute;
+	width: 70%;
+	left: 0;
+	height: 254px;	
+	z-index: 2;
+
+
+	-webkit-border-top-right-radius: 50px;
+	-webkit-border-bottom-right-radius: 50px;
+	-moz-border-radius-topright: 50px;
+	-moz-border-radius-bottomright: 50px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+
+	background: rgb(241,244,255);
+	background: -moz-linear-gradient(-90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	background: -webkit-linear-gradient(-90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	background: linear-gradient(-90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1f4ff",endColorstr="#f1f4ff",GradientType=1);
+
+	box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+	-webkit-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
+	-moz-box-shadow: 10px 10px 46px -1px rgba(58,83,125,0.51);
 }
 
 .testimonialIcon
@@ -307,23 +361,187 @@ ol {
     top: 50%;
 	position: absolute;
 }
+.testimonialIcon2 {
+    margin-right: -50px;
+    margin-top: -50px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.section5
+{
+	background-image: url(../img/bg2.png);
+	background-position: center bottom;
+	background-size: 100% 100%;
+	background-color: var(--bs-dark);
+
+	min-height: 820px;
+}
+
+.listNumber2 {
+	list-style: none;
+	counter-reset: my-awesome-counter;
+	margin: 0;
+	padding: 0;
+  }
+  .listNumber2 li {
+	counter-increment: my-awesome-counter;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    width: 49%;
+	vertical-align: top;
+	line-height: 0;
+  }
+  .listNumber2 li::before {
+	content: counter(my-awesome-counter);
+	color: white;
+	background-color: var(--bs-primary);
+	font-weight: bold;
+	font-size: 14px;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	display: inline-block;
+	padding: 5px;
+	line-height: 12px;
+	margin-right: 5px;
+    margin-bottom: 20px;
+	margin-top: 20px;
+	
+  }
+
+  .floatingImageRight {
+    position: absolute;
+    width: 80%;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+    z-index: 2;
+}
+
+.containerCards
+{
+	margin-bottom: 80px;
+	text-align: center;
+}
+.containerCards .card
+{
+	height: 180px;
+	width: 100%;
+	max-width: 350px;
+	border-radius: 20px;
+	border:none;
+
+	box-shadow: 10px 10px 50px 0px rgba(0,0,255,0.1);
+	-webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,255,0.1);
+	-moz-box-shadow: 10px 10px 50px 0px rgba(0,0,255,0.1);
+
+}
+.containerCards .card h3, .containerCards .card h4
+{
+	font-family: var(--bs-font-sans-serif);
+	font-weight: bold;
+}
+
+.iconCards {
+	border-radius: 40px;
+	background-color:gray;
+	width: 80px;
+	height: 80px;
+	
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+	color: white;
+	font-size: 30px;
+  }
+.section6
+{
+	background-color: #f0f4ff;
+}
+
+.section8
+{
+	background-image: url(../img/bg3.png);
+	background-position: center top;
+	background-size: 100% 100%;
+	background-color: var(--bs-dark);
+}
+
+.cardComparison
+{
+	box-shadow: 12.287px -8.604px 106px 0px rgba(0, 81, 162, 0.25);
+	border-radius: 0;
+}
+
+.cardComparisonLeft
+{
+	border-radius: 20px;
+	overflow: hidden !important;
+}
+
+.cardComparisonRight
+{
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
 /***************************************************************************/
 /***************************************************************************/
 @media only screen and (max-width:1400px){
-	.speechBalloon
+	.speechBalloon,.speechBalloon2
 	{
 		width: 85%;		
+	}
+	.floatingImageRight {
+		width: 55%;
 	}
 }
 
 @media only screen and (max-width:1200px){
-
+	
 }
 @media only screen and (max-width:1024px){
 
+	.textResponsive-16
+	{
+		font-size: 18px !important;
+	}
+
+	.textResponsive-14
+	{
+		font-size: 14px !important;
+	}
+
 }
 @media only screen and (max-width:991px){
-	.floatingImage
+	.floatingImageLeft
 	{
 		position: relative;
 		height: auto;
@@ -340,9 +558,19 @@ ol {
 		min-width: 250px;
 		max-width: 300px;
 	}
+	.floatingImageRight {
+		width: 65%;
+	}
 	.speechBalloon {
 		width: 80%;
 		right: 10%;
+		border-radius: 50px;
+		background: none;
+		background-color: rgb(241,244,255);
+	}
+	.speechBalloon2 {
+		width: 80%;
+		left: 10%;
 		border-radius: 50px;
 		background: none;
 		background-color: rgb(241,244,255);
@@ -352,13 +580,10 @@ ol {
 		width: 50%;
 		max-width: 250px;
 	}
-
-	.testimonialIcon
-	{
+	.testimonialIcon {
 		margin-left: initial;
 		margin-top: initial;
 		left: initial;
-
 		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
 		right: 15%;
@@ -367,20 +592,67 @@ ol {
 		width: 15%;
 		z-index: 1;
 	}
+	.testimonialIcon2 {
+		margin-left: initial;
+		margin-top: initial;
+		right: initial;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		left: 15%;
+		top: -10px;
+		position: absolute;
+		width: 15%;
+		z-index: 1;
+	}
+	.iconCards
+	{
+		margin-bottom: 10px;
+		width: 50px;
+		height: 50px;
+		font-size: 16px;
+	}
+
+	
+
+	
 }
 @media only screen and (max-width:750px){
 	.backgroundHome
 	{
 		padding-top:100px;
 	}
+	.floatingImageRight {
+		width: 70%;
+	}
 
-	
+	.containerCards .card h3, .containerCards .card h4
+	{
+		font-size: 14px;
+		text-align: center !important;
+	}
+	.containerCards
+	{
+		margin-bottom: -20px;
+	}
+
+		
 }
 
 @media only screen and (max-width:600px){
-
+	.floatingImageRight {
+		width: 100%;
+	}
+	.cardComparison .card-body
+	{
+		height: 250px;
+		overflow: auto;
+	}
 }
 @media only screen and (max-width:480px){
+	.grayLine
+	{
+		display: none;
+	}
 
 }
 @media only screen and (max-width:320px){
