@@ -162,7 +162,7 @@
 	background-position: center bottom;
 	background-size: cover;
 
-	min-height: 850px;
+	min-height: 820px;
 }
 
 ol {
@@ -273,8 +273,7 @@ ol {
 	position: absolute;
 	width: 70%;
 	right: 0;
-	height: 254px;
-	background-color: rgb(241, 244, 255);
+	height: 254px;	
 	z-index: 2;
 
 
@@ -285,6 +284,12 @@ ol {
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 50px;
 
+	background: rgb(241,244,255);
+	background: -moz-linear-gradient(90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	background: linear-gradient(90deg, rgba(241,244,255,1) 60%, rgba(241,244,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1f4ff",endColorstr="#f1f4ff",GradientType=1);
+
 }
 
   
@@ -293,7 +298,7 @@ ol {
 @media only screen and (max-width:1400px){
 	.speechBalloon
 	{
-		width: 85%;
+		width: 85%;		
 	}
 }
 
@@ -325,8 +330,14 @@ ol {
 		width: 80%;
 		right: 10%;
 		border-radius: 50px;
+		background: none;
+		background-color: rgb(241,244,255);
 	}
-	
+	.testimonialPhoto{
+		margin-top: 0;
+		width: 50%;
+		max-width: 250px;
+	}
 }
 @media only screen and (max-width:750px){
 	.backgroundHome
